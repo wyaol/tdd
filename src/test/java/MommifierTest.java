@@ -29,4 +29,17 @@ public class MommifierTest {
         // then
         assertEquals("keppp", res);
     }
+
+    @Test
+    void should_inset_when_have_aeiou_and_enough_0_3() {
+        // given
+        String str = "keep";
+        Mommifier mommifier = new Mommifier();
+
+        // when
+        String res = mommifier.convert(str);
+
+        // then
+        assertEquals("kemommyep", res);
+    }
 }
